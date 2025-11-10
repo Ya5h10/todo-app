@@ -1,0 +1,47 @@
+### Get / 
+GET http://localhost:3000
+
+### Registeration
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username":"user",
+    "password":"bassssss"
+}
+
+### login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username":"user",
+    "password":"bassssss"
+}
+
+### emulate fetch todos endpoint
+GET http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzQwMTkxLCJleHAiOjE3NjI4MjY1OTF9.Ph5CghFEOQlk9QXob4tkS7L1k9ojjP6lylhF1-prkn0
+
+### emulate create todo endpoint
+POST http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzQwMTkxLCJleHAiOjE3NjI4MjY1OTF9.Ph5CghFEOQlk9QXob4tkS7L1k9ojjP6lylhF1-prkn0
+Content-Type: application/json
+
+{
+    "task":"Finish the project again"
+}
+
+### emulate update todo endpoint
+PUT http://localhost:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzM5NDMzLCJleHAiOjE3NjI4MjU4MzN9.CrtD_Pid9GDoMJwZ8M_0UsDqpG9hrQ-xBthuIR4dfdw
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### emulate delete todo endpoint
+DELETE http://localhost:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzM5NDMzLCJleHAiOjE3NjI4MjU4MzN9.CrtD_Pid9GDoMJwZ8M_0UsDqpG9hrQ-xBthuIR4dfdw
+
