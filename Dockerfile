@@ -7,4 +7,6 @@ COPY . .
 
 EXPOSE 3000
 
+RUN npx prisma generate
+
 CMD ["node", "./src/server.js"]

@@ -1,5 +1,6 @@
 import express from 'express'
 import prisma from '../prismaClient.js'
+import { title } from 'process'
 
 const router = express.Router()
 
@@ -22,7 +23,7 @@ router.post('/', async (req, res) => {
 
     const result = await prisma.todo.create({
         data: {
-            task: task,
+            title: task,
             userId: req.userId
         }
     })

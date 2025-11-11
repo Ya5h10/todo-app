@@ -2,6 +2,7 @@ import express from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import prisma from '../prismaClient.js';
+import { title } from 'process';
 
 const router = express.Router()
 
@@ -22,7 +23,7 @@ router.post('/register', async (req, res) => {
         const defaultTodo = 'Welcome to your todo list!'
         await prisma.todo.create({
             data: {
-                task: defaultTodo,
+                title: defaultTodo,
                 userId: user.id
             }
         })
